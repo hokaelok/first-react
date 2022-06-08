@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import MemeHeader from "./components/MemeHeader";
+import MemeBody from "./components/MemeBody";
+import YesNoButton from "./components/YesNoButton";
+import Counter from "./components/Counter";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <div className="App">
+            {/* <MemeHeader />
+            <MemeBody /> */}
+            <YesNoButton />
+            {/* <Counter /> */}
+            {hello}
+        </div>
+    );
+};
 
 export default App;
