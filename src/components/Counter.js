@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CountInCounter from "./CountInCounter";
 
 export default function Counter() {
     const [count, setCount] = useState(0);
@@ -16,9 +17,7 @@ export default function Counter() {
             <button onClick={countMinus} className="border-2 border-black w-10">
                 -
             </button>
-            <div className="border-2 border-black w-10">
-                <h2>{count}</h2>
-            </div>
+            <CountInCounter number={count} />
             <button onClick={countPlus} className="border-2 border-black w-10">
                 +
             </button>

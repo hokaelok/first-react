@@ -2,17 +2,29 @@ import { useState } from "react";
 import MemesData from "../assets/API/MemesData";
 
 export default function MemeBody() {
-    const [memeImage, setMemeImage] = useState("");
+    // const [memeImage, setMemeImage] = useState(
+    //     "https://i.imgflip.com/30b1gx.jpg"
+    // );
+
+    // new meme state
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage: "https://i.imgflip.com/30b1gx.jpg",
+    });
+
+    // all meme images state
+    const [allMemeImages, setAllMemeImages] = useState(MemesData);
 
     /* click button function */
     const getMemeImage = () => {
-        const memesArray = MemesData.data.memes;
-        const randomIndex = Math.floor(
-            Math.random() * MemesData.data.memes.length
-        );
+        const memesArray = allMemeImages.data.memes;
+        const randomIndex = Math.floor(Math.random() * memesArray.length);
         const url = memesArray[randomIndex].url;
 
-        setMemeImage(url);
+        setMeme((prevMeme) => {
+            return { ...prevMeme, randomImage: url };
+        });
     };
 
     return (
@@ -40,8 +52,8 @@ export default function MemeBody() {
                 </div>
                 <div className="border-2 border-blue-600 mt-7 h-[450px]">
                     <img
-                        src={memeImage}
-                        alt="meme image"
+                        src={meme.randomImage}
+                        alt="meme"
                         className="mx-auto h-full max-w-full object-scale-down"
                     />
                 </div>
