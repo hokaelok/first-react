@@ -1,14 +1,25 @@
 import { useState } from "react";
 import BoxesData from "../assets/API/BoxesData";
+import Box from "./BoxInBoxes";
 
 export default function Boxes() {
-    const [boxes, settogglsetBoxes] = useState(BoxesData);
+    const [boxes, setBoxes] = useState(BoxesData);
+
+    const toggleBox = (id) => {
+        setBoxes((prevboxes) => {
+            return prevboxes.map((box) => {
+                return box.id === id ? { ...box, on: !box.on } : box;
+            });
+        });
+    };
 
     const boxElements = boxes.map((box) => (
-        <div
-            className="border-2 border-black h-32 w-32 inline-block m-5"
+        <Box
             key={box.id}
-        ></div>
+            id={box.id}
+            on={box.on}
+            handleClick={() => toggleBox(box.id)}
+        />
     ));
 
     return (
