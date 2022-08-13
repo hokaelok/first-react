@@ -1,14 +1,5 @@
 import { useState } from "react";
-import MemeHeader from "./components/MemeHeader";
-import MemeBody from "./components/MemeBody";
-import YesNoButton from "./components/YesNoButton";
-import Counter from "./components/Counter";
-import ProfileCard from "./components/ProfileCard";
-import UserHeader from "./components/UserHeader";
-import UserBody from "./components/UserBody";
-import Boxes from "./components/Boxes";
-import Jokes from "./components/Jokes";
-import Messages from "./components/Messages";
+import { FirstForm } from "./components";
 
 const App = () => {
     // user state
@@ -25,7 +16,8 @@ const App = () => {
             <UserBody name={user} /> */}
             {/* <Boxes /> */}
             {/* <Jokes /> */}
-            <Messages />
+            {/* <Messages /> */}
+            <FirstForm />
         </div>
     );
 };
