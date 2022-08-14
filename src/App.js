@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { FirstForm } from "./components";
+import { MemeHeader, MemeBody } from "./components";
 
 const App = () => {
     // user state
@@ -7,8 +7,8 @@ const App = () => {
 
     return (
         <div className="App">
-            {/* <MemeHeader />
-            <MemeBody /> */}
+            <MemeHeader />
+            <MemeBody />
             {/* <YesNoButton /> */}
             {/* <Counter /> */}
             {/* <ProfileCard /> */}
@@ -17,7 +17,9 @@ const App = () => {
             {/* <Boxes /> */}
             {/* <Jokes /> */}
             {/* <Messages /> */}
-            <FirstForm />
+            {/* <FirstForm /> */}
+            {/* <NewsLetterForm /> */}
+            {/* <FirstApi /> */}
         </div>
     );
 };

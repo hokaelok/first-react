@@ -9,3 +9,5 @@ export { default as Boxes } from "./Boxes";
 export { default as Jokes } from "./Jokes";
 export { default as Messages } from "./Messages";
 export { default as FirstForm } from "./FirstForm";
+export { default as NewsLetterForm } from "./NewsLetterForm";
+export { default as FirstApi } from "./FirstApi";
