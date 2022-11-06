@@ -15,3 +15,4 @@ export { default as WindowTracker } from "./WindowTracker";
 export { default as LightDarkIndex } from "./LightDarkIndex";
 export { default as NoteAppIndex } from "./NoteAppIndex";
 export { default as DarkLightSwitch } from "./DarkLightSwitch";
+export { default as TenziesIndex } from "./TenziesIndex";
